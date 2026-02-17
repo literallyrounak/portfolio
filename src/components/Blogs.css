@@ -1,0 +1,49 @@
+.blog-teaser {
+  max-width: 800px;
+}
+
+.blog-link-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--card-bg);
+  transition: all 0.3s ease;
+}
+
+.blog-link-card:hover {
+  background-color: #111111;
+  border-color: #27272a;
+  transform: translateY(-2px);
+}
+
+.blog-link-info h3 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.blog-link-info p {
+  font-size: 1.1rem;
+}
+
+.blog-link-icon {
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+}
+
+.blog-link-card:hover .blog-link-icon {
+  color: var(--text-primary);
+  transform: translate(4px, -4px);
+}
+
+@media (max-width: 640px) {
+  .blog-link-card {
+    padding: 1.5rem;
+  }
+  
+  .blog-link-info h3 {
+    font-size: 1.5rem;
+  }
+}

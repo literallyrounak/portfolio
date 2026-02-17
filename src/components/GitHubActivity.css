@@ -1,0 +1,16 @@
+.calendar-outer {
+  padding: 2.5rem 1.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--card-bg);
+  display: flex;
+  justify-content: center;
+  overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+  .calendar-outer {
+    padding: 1.5rem;
+    justify-content: flex-start;
+  }
+}
