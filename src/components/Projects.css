@@ -19,9 +19,9 @@
 }
 
 .project-card:hover {
-  border-color: #27272a;
+  border-color: var(--text-secondary);
   transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
 }
 
 .project-content {
@@ -129,11 +129,11 @@
   font-size: 0.9rem;
   font-weight: 600;
   color: var(--text-primary);
-  border-bottom: 1px solid transparent;
+  transition: opacity 0.3s ease;
 }
 
 .view-link:hover {
-  border-color: var(--text-primary);
+  opacity: 0.8;
 }
 
 @media (max-width: 640px) {

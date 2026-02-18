@@ -65,27 +65,28 @@
   gap: 0.5rem;
   padding: 0.6rem 1.25rem;
   border-radius: 8px;
-  background-color: #1a1a1a;
+  background-color: var(--card-bg);
   border: 1px solid var(--border-color);
   color: var(--text-primary);
   font-weight: 500;
   font-size: 0.95rem;
-  transition: all 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-modern.primary {
-  background-color: #f5f5f5;
-  color: #000;
-  border-color: #f5f5f5;
+  background-color: var(--text-primary);
+  color: var(--bg-color);
+  border-color: var(--text-primary);
 }
 
 .btn-modern:hover {
   transform: translateY(-2px);
-  background-color: #222;
+  background-color: #111;
 }
 
 .btn-modern.primary:hover {
-  background-color: #fff;
+  background-color: #ffffff;
+  opacity: 0.9;
 }
 
 .hero-social-row {
