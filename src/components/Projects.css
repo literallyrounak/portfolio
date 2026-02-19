@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 2rem;
+  z-index: 3;
 }
 
 @media (min-width: 768px) {
@@ -11,17 +12,19 @@
 }
 
 .project-card {
-  background-color: var(--card-bg);
-  border: 1px solid var(--border-color);
+  background-color: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-radius: 12px;
   overflow: hidden;
   transition: all 0.3s ease;
+  border: 1px solid var(--glass-border);
 }
 
 .project-card:hover {
-  border-color: var(--text-secondary);
   transform: translateY(-4px);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--border-color);
 }
 
 .project-content {

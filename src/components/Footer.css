@@ -1,14 +1,18 @@
 .footer {
-  padding: 6rem 0 3rem;
-  border-top: 1px solid var(--border-color);
-  margin-top: 6rem;
+  padding: 4rem 0 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 4rem;
+  background: rgba(10, 10, 10, 0.3);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 3;
 }
 
 .footer-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .footer-logo {
@@ -20,7 +24,7 @@
 
 .footer-social-icons {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .footer-icon-link {

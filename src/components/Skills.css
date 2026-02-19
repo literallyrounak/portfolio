@@ -1,5 +1,6 @@
 .skills {
   padding-top: 4rem;
+  z-index: 3;
 }
 
 .skills-categories-container {
@@ -31,8 +32,10 @@
   position: relative;
   width: 48px;
   height: 48px;
-  background-color: transparent;
-  border: 1px dashed var(--accent-muted);
+  background: rgba(255, 255, 255, 0.03); 
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -43,9 +46,8 @@
 }
 
 .skill-tile:hover {
-  background-color: var(--card-bg);
-  border-style: solid;
-  border-color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 .skill-tile-img {
@@ -61,15 +63,16 @@
 
 .skill-tile-label {
   position: absolute;
-  top: -30px; /* Positioned above the card */
+  top: -30px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 0.75rem;
   font-weight: 500;
   color: var(--text-primary);
-  background-color: var(--card-bg);
+  background: rgba(20, 20, 20, 0.8);
+  backdrop-filter: blur(4px);
   border: 1px solid var(--border-color);
-  padding: 2px 8px;
+  padding: 4px 10px;
   border-radius: 4px;
   white-space: nowrap;
   opacity: 0;
@@ -79,7 +82,7 @@
 
 .skill-tile:hover .skill-tile-label {
   opacity: 1;
-  top: -40px; /* Gentle lift on hover */
+  top: -40px;
 }
 
 @media (max-width: 768px) {

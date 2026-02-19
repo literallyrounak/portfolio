@@ -92,9 +92,8 @@
 .hero-social-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--border-color);
+  gap: 1rem;
+  padding-top: 1rem;
 }
 
 .hero-social-item {

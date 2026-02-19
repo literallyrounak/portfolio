@@ -59,6 +59,8 @@ const SkillCategory = ({ title, skills }) => (
 
 const Skills = () => {
   const frontendSkills = [
+    { name: 'HTML', icon: 'html5' },
+    { name: 'CSS', icon: 'css3' },
     { name: 'JavaScript', icon: 'js' },
     { name: 'React', icon: 'react' },
     { name: 'Redux', icon: 'redux' },

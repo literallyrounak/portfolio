@@ -14,11 +14,11 @@ const Hero = () => {
           className="hero-content"
         >
           <div className="hero-heading-row">
-            <h1>Hi, I'm Rounak</h1>
+            <h1>Hi, I'm Rounak.</h1>
           </div>
           
           <p className="hero-bio">
-            A Frontend focused Fullstack developer from India. I build responsive and clean web applications using React, Node.js, Express. I am currently diving into backend with nodejs, GoLang and python. 
+            A Frontend focused Fullstack developer from India. I build responsive and clean web applications using React, Node.js, Express. I am currently diving deep into backend with nodejs, GoLang and python. 
             <br /><br />
             I'm Open to <span className='highlight'>freelance projects</span> and <span className='highlight'>collaborations</span>.
           </p>
