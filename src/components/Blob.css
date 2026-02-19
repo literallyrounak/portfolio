@@ -7,7 +7,7 @@
   top: 50%;
   translate: -50% -50%;
   border-radius: 50%;
-  background: linear-gradient(to right, cyan, rgb(147, 93, 255));
+  background: linear-gradient(to right, aquamarine, mediumpurple);
   animation: rotate 20s infinite;
   opacity: 0.8;
   z-index: -1;
