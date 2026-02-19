@@ -18,7 +18,7 @@ const Hero = () => {
           </div>
           
           <p className="hero-bio">
-            A Frontend focused Fullstack developer, currently pursuing Computer Science & Engineering at NIT Durgapur. I build responsive and clean web applications using React, Node.js and Express. I am currently diving deep into backend with GoLang and Django. 
+            A Frontend focused <span className='highlight'>Fullstack developer</span>, currently pursuing Computer Science & Engineering at NIT Durgapur. I build responsive and clean web applications using <span className='highlight'>React, Node.js and Express</span>. I am currently diving deep into backend with GoLang and Django. 
             <br /><br />
             I'm Open to <span className='highlight'>freelance projects</span> and <span className='highlight'>collaborations</span>.
           </p>

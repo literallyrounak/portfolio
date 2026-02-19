@@ -1,13 +1,13 @@
 #blob {
   background-color: white;
-  height: 30vmax;
+  height: 35vmax;
   aspect-ratio: 1;
   position: fixed;
   left: 50%;
   top: 50%;
   translate: -50% -50%;
   border-radius: 50%;
-  background: linear-gradient(to right, aquamarine, mediumpurple);
+  background: linear-gradient(to right, cyan, rgb(147, 93, 255));
   animation: rotate 20s infinite;
   opacity: 0.8;
   z-index: -1;
@@ -19,7 +19,7 @@
   width: 100%;
   position: fixed;
   z-index: -1;
-  backdrop-filter: blur(15vmax);
+  backdrop-filter: blur(18vmax);
   pointer-events: none;
 }
 
