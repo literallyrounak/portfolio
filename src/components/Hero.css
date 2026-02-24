@@ -1,6 +1,7 @@
 .hero {
   padding-top: clamp(8rem, 20vh, 12rem);
   padding-bottom: 4rem;
+  z-index: 3;
 }
 
 .hero-content {
