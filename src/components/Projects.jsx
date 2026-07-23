@@ -5,12 +5,26 @@ import './Projects.css';
 
 const projects = [
   {
-    title: 'Whismur',
-    description: 'A real-time chat application with authentication using React, Express, and Socket.io.',
-    tech: ['react', 'nodejs', 'express', 'socket.io'],
-    github: 'https://github.com/literallyrounak/whismur',
-    live: 'https://literallyrounak.github.io/whismur',
+    title: 'GoodFirstFind',
+    description: 'A platform for finding good first issues in open-source projects and keeping track of them.',
+    tech: ['react', 'nodejs', 'express', 'mongodb'],
+    github: 'https://github.com/literallyrounak/GoodFirstFind',
+    live: 'https://goodfirstfind.onrender.com/',
     status: 'in-progress'
+  },
+  {
+    title: 'Chatot',
+    description: 'A real-time chat application with authentication using React, Express, MongoDB and Socket.io.',
+    tech: ['react', 'nodejs', 'express', 'mongodb', 'socket.io'],
+    github: 'https://github.com/literallyrounak/chatot',
+    live: 'https://chatot-4u65.onrender.com/'
+  },
+  {
+    title: 'Hoopa - Url Shortener',
+    description: 'A URL shortener built with Custom Alias & Analytics using React, Node.js, Express and MongoDB.',
+    tech: ['react', 'nodejs', 'express', 'mongodb'],
+    github: 'https://github.com/literallyrounak/hoopa',
+    live: 'https://hoopa-3542.onrender.com/'
   },
   {
     title: 'Slowpoke',
@@ -21,7 +35,7 @@ const projects = [
   },
   {
     title: 'Espeon',
-    description: 'Data of all company wise questions available on LeetCode premium in a sophisticated way.',
+    description: 'Web Application containing all company wise questions available on LeetCode premium in a sophisticated way.',
     tech: ['react', 'js', 'python'],
     github: 'https://github.com/literallyrounak/espeon',
     live: 'https://literallyrounak.github.io/espeon'
@@ -29,16 +43,9 @@ const projects = [
   {
     title: 'Filmbase',
     description: 'A simple React app which uses Open Movie Database search to fetch and show movie details such as cast, runtime, etc.',
-    tech: ['react'],
+    tech: ['react', 'js', 'css'],
     github: 'https://github.com/literallyrounak/filmbase',
     live: 'https://literallyrounak.github.io/filmbase'
-  },
-  {
-    title: 'To-do-app',
-    description: 'A simple React to-do application built using React and Tailwind.',
-    tech: ['react', 'js', 'tailwindcss'],
-    github: 'https://github.com/literallyrounak/to-do-app',
-    live: 'https://literallyrounak.github.io/to-do-app'
   }
 ];
 

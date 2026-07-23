@@ -72,6 +72,8 @@ const Skills = () => {
     { name: 'Node.js', icon: 'nodejs' },
     { name: 'Express', icon: 'express' },
     { name: 'Socket.io', icon: 'socketio' },
+    { name: 'MongoDB', icon: 'mongodb' },
+    { name: 'Python', icon: 'python' },
   ];
 
   const toolsSkills = [
