@@ -14,7 +14,7 @@ export const socials = [
   { label: 'GitHub', href: 'https://github.com/literallyrounak', icon: Github, footer: true },
   { label: 'LinkedIn', href: 'https://linkedin.com/in/literallyrounak', icon: Linkedin, footer: true },
   { label: 'Twitter', href: 'https://twitter.com/literallyrounak', icon: Twitter, footer: true },
-  { label: 'Mail', href: 'mailto:rounak.contact@example.com', icon: Mail, footer: true },
+  { label: 'Mail', href: 'mailto:literallyrounak.dev@gmail.com', icon: Mail, footer: true },
 ];
 
 export const techStack = [
