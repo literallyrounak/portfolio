@@ -1,35 +1,81 @@
-import React, { useState, useEffect } from 'react';
-import './Header.css';
+import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { Menu } from 'lucide-react';
+import { motion } from 'framer-motion';
+import Breadcrumb from './Breadcrumb';
+import Sidebar from './Sidebar';
+import { navItems } from '../data/site';
+
+const MotionSpan = motion.span;
 
 const Header = () => {
-  const [scrolled, setScrolled] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const location = useLocation();
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  const isActive = (href) => {
+    if (href === '/') {
+      return location.pathname === '/';
+    }
+    return location.pathname.startsWith(href);
+  };
 
   return (
-    <header className={`header ${scrolled ? 'scrolled' : ''}`}>
-      <nav className="container nav">
-        <div className="nav-left">
-          <a href="#" className="nav-logo">
-            <img src="https://github.com/literallyrounak.png" alt="Rounak" className="nav-avatar-logo" />
-          </a>
-        </div>
-        
-        <ul className="nav-links">
-          <li><a href="#projects" className="nav-link">Projects</a></li>
-          <li><a href="#github-activity" className="nav-link">Activity</a></li>
-          <li><a href="#skills" className="nav-link">Skills</a></li>
-          <li><a href="#contact" className="nav-link">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+    <>
+      <div className="header sticky top-0 z-40 flex h-24 items-center justify-between p-5 pb-10 select-none">
+        <Breadcrumb />
+        <button
+          type="button"
+          onClick={() => setSidebarOpen(true)}
+          className="text-text hover:text-accent rounded p-2 md:hidden"
+          aria-label="Open navigation menu"
+        >
+          <Menu size={24} />
+        </button>
+        <nav className="hidden items-center gap-1.5 md:flex">
+          {navItems.map((item) => {
+            const active = isActive(item.href);
+            return (
+              <Link
+                key={item.href}
+                to={item.href}
+                className={`relative rounded-md px-3.5 py-1.5 text-sm font-heading font-semibold transition-colors duration-200 ${
+                  active ? 'text-text' : 'text-subtext0 hover:text-text'
+                }`}
+              >
+                {active && (
+                  <MotionSpan
+                    layoutId="activeNav"
+                    className="absolute inset-0 rounded-md bg-surface1/60 border border-surface2/40"
+                    transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+                  />
+                )}
+                <span className="relative z-10">{item.label}</span>
+              </Link>
+            );
+          })}
+
+          <button
+            type="button"
+            onClick={() => setSidebarOpen(true)}
+            className="text-subtext0 hover:text-text cursor-pointer rounded-md px-3.5 py-1.5 text-sm font-heading font-semibold transition-colors duration-200"
+          >
+            More...
+          </button>
+        </nav>
+      </div>
+
+      <Sidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+
+      <style>{`
+        .header {
+          mask: linear-gradient(black, black, transparent);
+          backdrop-filter: blur(10px);
+          -webkit-backdrop-filter: blur(10px);
+        }
+      `}</style>
+    </>
   );
 };
 
 export default Header;
+
