@@ -9,8 +9,16 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rounak Kumar Gupta | Portfolio</title>
+    <script>
+      (function () {
+        var saved = localStorage.getItem('theme');
+        var dark = saved ? saved === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.classList.toggle('dark', dark);
+      })();
+    </script>
     <style>
-      body { background-color: #1e1e2e; color: #cdd6f4; }
+      html.dark body { background-color: #1a1b26; color: #c0caf5; }
+      html:not(.dark) body { background-color: #fafafa; color: #131316; }
     </style>
     <meta
       name="description"

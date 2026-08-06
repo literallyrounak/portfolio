@@ -1,36 +1,51 @@
-import { Routes, Route, useLocation } from 'react-router-dom';
-import { AnimatePresence } from 'framer-motion';
-import Header from './components/Header';
+import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
+import Nav from './components/Nav';
+import Hero from './components/Hero';
+import Separator from './components/Separator';
+import About from './components/About';
+import Socials from './components/Socials';
+import TechStack from './components/TechStack';
+import Cursor from './components/Cursor';
+import Experience from './components/Experience';
+import ProjectsSection from './components/ProjectsSection';
+import GithubActivity from './components/GithubActivity';
 import Footer from './components/Footer';
-import Home from './pages/Home';
-import About from './pages/About';
-import Projects from './pages/Projects';
-import ProjectDetail from './pages/ProjectDetail';
-import Pics from './pages/Pics';
-import PageTransition from './components/PageTransition';
+
+const MotionDiv = motion.div;
 
 function App() {
-  const location = useLocation();
+  const [isDark, setIsDark] = useState(() => document.documentElement.classList.contains('dark'));
+
+  useEffect(() => {
+    document.documentElement.classList.toggle('dark', isDark);
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  }, [isDark]);
+
+  const toggleTheme = () => setIsDark((prev) => !prev);
 
   return (
-    <div className="flex min-h-screen flex-col bg-base">
-      <Header />
-      <main className="flex-grow">
-        <AnimatePresence mode="wait" initial={false}>
-          <Routes location={location} key={location.pathname}>
-            <Route path="/" element={<PageTransition><Home /></PageTransition>} />
-            <Route path="/about" element={<PageTransition><About /></PageTransition>} />
-            <Route path="/projects" element={<PageTransition><Projects /></PageTransition>} />
-            <Route path="/projects/:slug" element={<PageTransition><ProjectDetail /></PageTransition>} />
-            <Route path="/pics" element={<PageTransition><Pics /></PageTransition>} />
-          </Routes>
-        </AnimatePresence>
-      </main>
+    <>
+    <Cursor />
+    <MotionDiv
+      initial={{ opacity: 0, y: 12 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4, ease: 'easeOut' }}
+      className="min-h-screen"
+    >
+      <Nav isDark={isDark} toggleTheme={toggleTheme} />
+      <Hero />
+      <Separator />
+      <About />
+      <Socials />
+      <TechStack />
+      <Experience />
+      <ProjectsSection />
+      <GithubActivity />
       <Footer />
-    </div>
+    </MotionDiv>
+    </>
   );
 }
 
-
 export default App;
-
