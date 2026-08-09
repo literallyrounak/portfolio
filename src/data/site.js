@@ -17,7 +17,6 @@ export const techStack = [
   { name: 'React', category: 'Frontend' },
   { name: 'Redux', category: 'Frontend' },
   { name: 'Tailwind CSS', category: 'Frontend' },
-  { name: 'Svelte', category: 'Frontend' },
 
   { name: 'Node.js', category: 'Backend' },
   { name: 'Express', category: 'Backend' },
@@ -29,6 +28,7 @@ export const techStack = [
   { name: 'Git', category: 'Tools' },
   { name: 'GitHub', category: 'Tools' },
   { name: 'Postman', category: 'Tools' },
+  { name: 'Godot', category: 'Tools' },
 ];
 
 export const aboutParagraphs = [
